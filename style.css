@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; /*impedir que a página role para o lado*/
+}
+
+/*============================= MENU =============================*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #ECE1CA;
+  font-size: 16px;
+  border-bottom: 2px solid #ECE1CA;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Cria um espaçamento uniforme entre os links sem precisar de margens individuais */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+} 
+
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px; 
+  border-radius: 14px; 
+  background-color: transparent; /* Fundo invisível por padrão */
+  
+  /* Deixa a transição de cor suave sem mover nada */
+  transition: background-color 0.2s ease, color 0.2s ease; 
+}
+
+.nav-links li {
+  margin-left: 40px;
+  font-family: "Plus Jakarta Sans", Inter, sans-serif;
+}
+
+.home, .servicos, .pets, .historico, .perfil {
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  font-size: 20px;
+  margin-top: 10px;
+  transition: all 0.3s ease; /* Centraliza a transição de cor e fundo aqui */
+}
+
+.nav-links li:active a {
+  background-color: #FA6E00;
+  color: white;
+}
+
+.nav-links a {
+  text-decoration: none;
+}
+
+.nav-links a:hover{
+  color: #FA6E00;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.botao {
+  background-color: #964614; /* Cor de fundo azul */
+  color: white;             /* Cor do texto */
+  font-size: 18px;           /* Tamanho da fonte */
+  font-weight: bold;         /* Texto em negrito */
+  padding: 14px 16px;       /* Espaçamento interno (cima/baixo e lados) */
+  border: none;              /* Remove a borda padrão */
+  border-radius: 12px;        /* Arredonda os cantos */
+  cursor: pointer;           /* Muda o cursor para "mãozinha" ao passar por cima */
+  transition: background-color 0.3s ease; /* Suaviza a animação */
+}
+
+.botao:hover {
+  background-color: #a16540;
+}
+
+.botao-entrar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+/*==============================================*/
+
+
+/*============== CONTEÚDO PRINCIPAL ==============*/
+
+.btn-pricipal {
+  width: 800px;
+  background-color: #964614; 
+  color: white;             
+  font-size: 18px;           
+  font-weight: bold;       
+  padding: 20px 18px;       /* Espaçamento interno (cima/baixo e lados) */
+  border: none;              
+  border-radius: 12px;        
+  cursor: pointer;           
+  transition: background-color 0.3s ease; /* Suaviza a animação */
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; 
+  position: relative;
+  top: 120px;
+}
+
+.btn-pricipal:hover {
+  background-color: #a16540;  
+}
+
+.meus-pets-inicio {
+  text-align: left;
+  margin-top: 160px;
+  margin-left: 30%;
+} 
+
+.h2-meus-pets {
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.btn-add-pet {
+  margin-top: 20px;
+  border-radius: 600px;
+  width: 70px;
+  height: 70px;
+  color: #964614;
+  background-color: #ECE1CA;
+  border: none;
+  cursor: pointer;
+}
+
+.txt-add {
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.txt-verTodos {
+  color: #525050;
+  position: absolute;
+  right: 570px;
+  top: 342px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+} 
