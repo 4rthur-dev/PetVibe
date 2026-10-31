@@ -84,6 +84,7 @@
 .btn-agendar {
     background-color: #964614;
     color: white;
+    font-size: 16px;
     border-radius: 12px;
     padding: 14px;
     font-weight: bold;
@@ -98,10 +99,12 @@
 
 .btn-agendar:hover {
     background-color: #a16540;
+    cursor: pointer;
 }
 
 .card-banho:hover, .card-tosa:hover, .card-banho-tosa:hover {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     transform: translateY(-12px); /* Sobe o card de leve */
-    box-shadow: 0px 0px 16px #964614;
+    box-shadow: 0px 0px 20px #964614;
+    cursor: pointer;
 }

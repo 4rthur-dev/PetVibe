@@ -26,7 +26,7 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 20px; /* Cria um espaçamento uniforme entre os links sem precisar de margens individuais */
+  gap: 12px; /* Cria um espaçamento uniforme entre os links sem precisar de margens individuais */
   list-style: none;
   padding: 0;
   margin: 0;

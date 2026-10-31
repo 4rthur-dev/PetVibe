@@ -1,0 +1,10 @@
+.info-funcionar {
+    background-color: #FBF7EE;
+    display: flex;
+    flex-direction: column;
+    padding-top: 290px;
+    padding-left: 400px;
+    margin: 0;
+    width: 100%;
+    
+}
