@@ -31,7 +31,7 @@
     padding: 40px 1px;
 }
 
-.card-banho, .card-tosa, .card-banho-tosa{
+.card-banho, .card-tosa{
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -43,6 +43,19 @@
     min-height: 280px;
     margin-bottom: 20px;
     /* hover: box-shadow: 0px 0px 12px #964614;*/
+}
+
+.card-banho-tosa {
+    display: flex;
+    flex-direction: column;
+    background-color: #FBF7EE;
+    border: 2px solid #E3D9C3;
+    border-radius: 18px;
+    padding: 26px;
+    gap: 18px;
+    width: 370px;
+    min-height: 280px;
+    margin-bottom: 20px;
 }
 
 .header-card {
