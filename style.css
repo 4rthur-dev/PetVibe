@@ -1,3 +1,5 @@
+@import url('https://googleapis.com');
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +11,7 @@
 }
 
 body {
+  font-family: 'Inter', sans-serif;
   overflow-x: hidden; /*impedir que a página role para o lado*/
 }
 
@@ -147,7 +150,7 @@ body {
 
 .btn-add-pet {
   margin-top: 20px;
-  border-radius: 600px;
+  border-radius: 50%;
   width: 70px;
   height: 70px;
   color: #964614;

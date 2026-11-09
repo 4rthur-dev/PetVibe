@@ -1,27 +1,31 @@
+@import url('https://googleapis.com');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
 .ver-servicos {
     display: flex;
     flex-direction: column;
     gap: 10px;
     position: relative;
-    top: 200px;
-    left: 470px;
+    top: 22vh;
+    left: 15%;
+    margin-bottom: 14%;
 }
 
 .h3-servicos {
     color: #FA6E00;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .h2-servicos {
     font-size: 36px;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .p-servicos {
     color: #5F5A52;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
@@ -39,10 +43,9 @@
     border-radius: 18px;
     padding: 26px;
     gap: 18px;
-    width: 370px;
-    min-height: 280px;
+    width: 450px;
+    height: 260px;
     margin-bottom: 20px;
-    /* hover: box-shadow: 0px 0px 12px #964614;*/
 }
 
 .card-banho-tosa {
@@ -53,8 +56,8 @@
     border-radius: 18px;
     padding: 26px;
     gap: 18px;
-    width: 370px;
-    min-height: 280px;
+    width: 450px;
+    height: 260px    ;
     margin-bottom: 20px;
 }
 
@@ -68,7 +71,6 @@
     background-color: #FA6E00;
     color: white;
     border-radius: 12px;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     padding: 4px 12px;
     width: 120px;
@@ -77,19 +79,16 @@
 .h3-banho, .h3-tosa, .h3-banho-tosa {
     font-size: 20px;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
 .p-banho, .p-tosa, .p-banho-tosa {
     color: #5F5A52;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .info-preco {
     color: #964614;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 14px;
 }
@@ -101,7 +100,6 @@
     border-radius: 12px;
     padding: 14px;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
     border-color: transparent;
     width: 100%; /* Faz o botão ocupar toda a largura disponível */
   
@@ -115,9 +113,16 @@
     cursor: pointer;
 }
 
-.card-banho:hover, .card-tosa:hover, .card-banho-tosa:hover {
+.card-banho:hover, .card-tosa:hover{
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     transform: translateY(-12px); /* Sobe o card de leve */
     box-shadow: 0px 0px 20px #964614;
+    cursor: pointer;
+}
+
+.card-banho-tosa:hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform: translateY(-12px); /* Sobe o card de leve */
+    box-shadow: 0px 0px 20px #FA6E00;
     cursor: pointer;
 }
