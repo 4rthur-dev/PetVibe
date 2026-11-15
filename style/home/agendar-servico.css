@@ -1,0 +1,496 @@
+@import url('https://googleapis.com');
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ativa a rolagem suave em toda a página */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden; /*impedir que a página role para o lado*/
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+/*============================= MENU =============================*/
+.navbar { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px 50px; 
+    background-color: #ECE1CA; 
+    border-bottom: 2px solid #ECE1CA; 
+    min-height: 90px;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { 
+    width: 80px; 
+    height: 80px;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-links { 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.nav-links li { 
+    font-family: "Plus Jakarta Sans", Inter, sans-serif; 
+}
+
+.nav-links a { 
+    color: black; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 20px;
+    padding: 10px 20px; 
+    display: inline-block;
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FA6E00; 
+    letter-spacing: 1px;
+    padding-bottom: 14px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #FA6E00;
+}
+
+.nav-links li:active a { 
+    border-radius: 16px;
+    background-color: #FA6E00; 
+    color: white; 
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Container principal que alinha o título e os cards juntos */
+.secao-servicos {
+  width: 100%;
+  max-width: 3000px; /* Mesma largura dos cards */
+  padding: 140px 400px;   /* Espaço de respiro nas bordas em celulares */
+}
+
+.sec-title {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+}
+
+.sec-title h1 {
+    font-size: 32px;
+    color: #121212;
+    font-weight: 600;
+}
+
+.sec-title p {
+    color: #666666;
+    margin-bottom: 50px;
+}
+
+.servicos-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Estilo do Card (Fechado e Aberto) */
+details.servico-card {
+    background-color: #EFE5CE;
+    border-radius: 10px;
+    border: 1.5px solid transparent;
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+/* Borda escura quando o card está aberto (igual à segunda imagem) */
+details.servico-card[open] {
+    border-color: #3D352E;
+}
+
+/* Cabeçalho clicável */
+summary.servico-header {
+    list-style: none; /* Remove a setinha padrão do navegador */
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Remove a setinha padrão no Safari/Chrome */
+summary.servico-header::-webkit-details-marker {
+    display: none;
+}
+
+.servico-titulo-grupo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.servico-titulo {
+    color: #8C4716;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Etiqueta laranja "Mais pedido" */
+.badge-destaque {
+    background-color: #FF7A1A;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.servico-subtitulo {
+    color: #000000;
+    font-size: 14px;
+}
+
+/* Ícone da seta */
+.seta-icone {
+    width: 20px;
+    height: 20px;
+    color: #222222;
+    transition: transform 0.25s ease;
+}
+
+/* Gira a seta para cima quando aberto */
+details.servico-card[open] .seta-icone {
+    transform: rotate(180deg);
+}
+
+/* Conteúdo interno (que aparece ao clicar) */
+.servico-conteudo {
+    padding: 0 24px 24px 24px;
+}
+
+.divisor {
+    border: none;
+    border-top: 1px solid #D5C8AF;
+    margin-bottom: 18px;
+}
+
+.incluso-titulo {
+    font-size: 14px;
+    color: #2C2724;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+/* Lista com bolinhas marrons */
+.incluso-lista {
+    list-style: none;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.incluso-lista li {
+    font-size: 14px;
+    color: #5C5349;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.incluso-lista li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #8C4716;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Caixas brancas de Duração e Preço */
+.info-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.info-box {
+    background-color: #F9F9F9;
+    padding: 14px 18px;
+    border-radius: 8px;
+}
+
+.info-label {
+    display: block;
+    font-size: 12px;
+    color: #7A746E;
+    margin-bottom: 4px;
+}
+
+.info-valor {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1F1D1B;
+}
+
+/* Botão principal */
+.btn-agendar {
+    width: 100%;
+    background-color: #934614;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-agendar:hover {
+    background-color: #78380E;
+}
+
+
+.como-feito {
+    margin-top: 100px;
+    background-color: #FBF7EE;
+    padding: 80px 260px;
+}
+
+.div-title {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.div-title p {
+    color: #FA6E00;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.div-title h2 {
+    color: #121212;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.cards-etapas {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.etapa-1, .etapa-2, .etapa-3, .etapa-4 {
+    background-color: white;
+    border: 1px solid #E3D9C3;
+    border-radius: 16px;
+
+    padding: 30px 60px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.etapa-1:hover, .etapa-2:hover, .etapa-3:hover, .etapa-4:hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform: translateY(-12px);
+}
+
+.cards-etapas h3 {
+    color: #121212;
+    font-weight: 600;
+}
+
+.n-etapa {
+    color: #FA6E00;
+    font-weight: 600;
+    font-size: 14px;
+    
+}
+
+
+
+.pricing-section {
+    width: 100%;
+    max-width: 1040px;
+    margin-top: 80px;
+    margin-left: 300px;
+}
+
+.eyebrow {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #FA6E00;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 34px;
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #f0ece1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 600px;
+    
+}
+
+thead {
+    background-color: #964614;
+}
+
+th {
+    padding: 18px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    width: 25%;
+}
+
+td {
+    padding: 18px 24px;
+    font-size: 14px;
+    color: #555555;
+    border-bottom: 1px solid #f5f2eb;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td:first-child {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+
+
+
+footer {
+    background-color: #ECE1CA;
+    padding: 60px 14% 30px 14%;
+    margin-top: 200px;
+}
+
+.footer-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d5c7ab;
+}
+
+.footer-1 button {
+    background-color: #964614;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.footer-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.footer2-a img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.footer-2 ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+    color: #5F5A52;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px solid #d5c7ab;
+    font-size: 14px;
+    color: #5F5A52;
+}
+
+.footer-legal-links a {
+    color: #5F5A52;
+    text-decoration: none;
+}
+
+
+/* Ajuste para telas de celular */
+@media (max-width: 480px) {
+    .info-boxes {
+    grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,391 @@
+@import url('https://googleapis.com');
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*============================= MENU =============================*/
+.navbar { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 10px 50px; 
+  background-color: #ECE1CA; 
+  border-bottom: 2px solid #ECE1CA; 
+  min-height: 90px;
+  position: sticky; 
+  top: 0;
+  z-index: 1000;
+}
+
+.logo { 
+  width: 80px; 
+  height: 80px;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-links { 
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+.nav-links li { 
+  font-family: "Plus Jakarta Sans", Inter, sans-serif; 
+}
+
+.nav-links a { 
+  color: black; 
+  text-decoration: none; 
+  font-weight: bold; 
+  font-size: 20px;
+  padding: 10px 20px; 
+  display: inline-block;
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #FA6E00; 
+  letter-spacing: 1px;
+  padding-bottom: 14px;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #FA6E00;
+}
+
+.nav-links li:active a { 
+  border-radius: 16px;
+  background-color: #FA6E00; 
+  color: white; 
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/*============================= CONTEÚDO PRINCIPAL =============================*/
+main {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 40px 0 24px 0;
+}
+
+.title h1 {
+  font-size: 32px;
+  color: #121212;
+}
+
+.title p {
+  font-size: 15px;
+  color: #5F5A52;
+}
+
+.conteudo-principal {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 40px;
+  align-items: start;
+}
+
+.marcar-agendamentos {
+  border-radius: 16px;
+  background-color: #FBF7EE;
+  border: 1px solid #E3D9C3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 40px;
+  gap: 16px;
+  width: 100%;
+}
+
+.icon-circle {
+  width: 100px;
+  height: 100px;
+  background-color: #ECE1CA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.marcar-agendamentos h2 {
+  color: #121212;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.marcar-agendamentos p {
+  color: #5F5A52;
+}
+
+.btn-agendar {
+  background-color: #964614;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 14px;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  max-width: 220px;
+  margin-top: auto; 
+  transition: background-color 0.3s;
+}
+
+.btn-agendar:hover {
+  cursor: pointer;
+  background-color: #a16540;
+}
+
+.btn-agendar:active {
+  background-color: #964614;
+  color: white;
+}
+
+/*============================= COLUNA LATERAL =============================*/
+.coluna-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  background-color: white;
+  padding: 32px;
+  border: 1px solid #E3D9C3;
+  border-radius: 16px;
+}
+
+.card h3 {
+  margin: 0 0 10px 0;
+}
+
+.card p {
+  color: #5F5A52;
+}
+
+.p-card2 {
+  margin: 0 0 14px 0;
+}
+
+.card button {
+  border: 2px solid #964614;
+  border-radius: 8px;
+  color: #964614;
+  background-color: white;
+  width: 100%;
+  padding: 12px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card button:hover {
+  background-color: #964614;
+  color: white;
+  cursor: pointer;
+}
+
+.card button:active {
+  background-color: white;
+  color: #964614;
+}
+
+/*============================= ÚLTIMOS SERVIÇOS =============================*/
+.ultimos-servicos {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 50px 0 24px 0;
+}
+
+.ultimos-servicos h2 {
+  color: #121212;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.ultimos-servicos p {
+  color: #964614;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*============================= FOOTER =============================*/
+footer {
+    background-color: #ECE1CA;
+    padding: 60px 14% 30px 14%;
+    margin-top: 300px;
+}
+
+.footer-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d5c7ab;
+}
+
+.footer-1 button {
+    background-color: #964614;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.footer-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.footer2-a img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.footer-2 ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+    color: #5F5A52;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px solid #d5c7ab;
+    font-size: 14px;
+    color: #5F5A52;
+}
+
+.footer-legal-links a {
+    color: #5F5A52;
+    text-decoration: none;
+}
+
+/*============================= MEDIA QUERIES =============================*/
+@media (max-width: 1100px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .logo {
+    position: static;
+    transform: none;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 960px) {
+  .conteudo-principal {
+    grid-template-columns: 1fr;
+  }
+
+  .coluna-lateral {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+
+  .title h1 {
+    font-size: 26px;
+  }
+
+  .marcar-agendamentos {
+    padding: 48px 20px;
+  }
+
+  .marcar-agendamentos h2 {
+    font-size: 20px;
+  }
+
+  .footer-1 {
+    margin-top: 80px;
+  }
+
+  .footer-1 h2 {
+    font-size: 24px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
