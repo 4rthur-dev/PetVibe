@@ -20,16 +20,20 @@ body {
 
 /*============================= MENU =============================*/
 .navbar { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    padding: 10px 50px; 
-    background-color: #ECE1CA; 
-    border-bottom: 2px solid #ECE1CA; 
-    min-height: 90px;
-    position: sticky; 
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #ECE1CA;
+  border-bottom: 2px solid #ECE1CA;
+  min-height: 90px;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box; /* Evita que o padding de 50px crie barra de rolagem horizontal */
+  z-index: 1000;
 }
 
 .logo { 
@@ -66,18 +70,13 @@ body {
 }
 
 .nav-links a:hover {
-    color: #FA6E00; 
-    letter-spacing: 1px;
-    padding-bottom: 14px;
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-    border-bottom-color: #FA6E00;
+  color: #964614; 
 }
 
-.nav-links li:active a { 
-    border-radius: 16px;
-    background-color: #FA6E00; 
-    color: white; 
+.nav-links a.servicos {
+  background-color: #964614;
+  color: white;
+  border-radius: 10px;
 }
 
 .nav-actions {

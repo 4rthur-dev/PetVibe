@@ -13,7 +13,7 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  overflow-x: hidden; /*impedir que a página role para o lado*/
+
   overflow-y: auto;
   min-height: 100vh;
 }
@@ -27,9 +27,7 @@ body {
     background-color: #ECE1CA; 
     border-bottom: 2px solid #ECE1CA; 
     min-height: 90px;
-    position: sticky; 
-    top: 0;
-    z-index: 1000;
+    position: sticky;
 }
 
 .logo { 
@@ -66,19 +64,15 @@ body {
 }
 
 .nav-links a:hover {
-    color: #FA6E00; 
-    letter-spacing: 1px;
-    padding-bottom: 14px;
-    border-bottom-style: solid;
-    border-bottom-width: 3px;
-    border-bottom-color: #FA6E00;
+    color: #964614; 
 }
 
-.nav-links li:active a { 
-    border-radius: 16px;
-    background-color: #FA6E00; 
-    color: white; 
+.nav-links a.home {
+    background-color: #964614;
+    color: white;
+    border-radius: 10px;
 }
+
 
 .nav-actions {
   display: flex;
@@ -158,6 +152,9 @@ body {
     font-weight: 500;
     transition: background-color 0.4s, color 0.4s;
 }
+
+
+
 
 
 /*============== CONTEÚDO PRINCIPAL ==============*/
@@ -525,6 +522,7 @@ footer {
     gap: 8px;
     margin-top: 10px;
     color: #5F5A52;
+    cursor: pointer;
 }
 
 .footer-bottom {
@@ -543,6 +541,7 @@ footer {
     color: #5F5A52;
     text-decoration: none;
 }
+
 
 /* ================ RESPONSIVIDADE (MEDIA QUERIES) ================ */
 @media (max-width: 1100px) {

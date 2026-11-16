@@ -70,18 +70,13 @@ img {
 }
 
 .nav-links a:hover {
-  color: #FA6E00; 
-  letter-spacing: 1px;
-  padding-bottom: 14px;
-  border-bottom-style: solid;
-  border-bottom-width: 3px;
-  border-bottom-color: #FA6E00;
+  color: #964614; 
 }
 
-.nav-links li:active a { 
-  border-radius: 16px;
-  background-color: #FA6E00; 
-  color: white; 
+.nav-links a.agendamentos {
+  background-color: #964614;
+  color: white;
+  border-radius: 10px;
 }
 
 .nav-actions {
