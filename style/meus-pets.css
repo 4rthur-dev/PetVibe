@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 /* Ativa a rolagem suave em toda a página */
@@ -12,7 +13,6 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   overflow-y: auto;
   min-height: 100vh;

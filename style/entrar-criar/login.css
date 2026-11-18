@@ -1,0 +1,210 @@
+@import url('https://googleapis.com');
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+} 
+
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* LADO ESQUERDO */
+
+.left-side {
+  width: 55%;
+  background-color: #ECE1CA;
+  padding: 100px 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-side h1 {
+  font-size: 44px;
+  font-weight: bold;
+  color: #964614;
+  margin-bottom: 16px;
+}
+
+.subtitulo {
+  color: #121212;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.lista {
+  list-style: none;
+}
+
+.lista li {
+  color: #121212;
+}
+
+.lista li, span {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.lista span {
+  background-color: #964614;
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* LADO DIREITO */
+
+.right-side {
+  width: 45%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  padding: 40px;
+}
+
+.logo {
+  padding-top: 80px; 
+}
+
+.img-logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.right-side h2 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.right-side p {
+  color: #666666;
+  margin-bottom: 40px;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-grupo label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-grupo input {
+  border-radius: 10px;
+  border: 2px solid #666666;
+  width: 400px; 
+  padding: 14px 14px;
+}
+
+.form-grupo input:focus{
+  border: 2px solid #964614;
+  outline: none;
+}
+
+.label-senha {
+  margin-top: 14px;
+}
+
+.form-opcoes {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin-top: 8px;
+}
+
+.form-opcoes label {
+  color: #121212;
+}
+
+.form-opcoes input[type='checkbox'] {
+  cursor: pointer;
+  accent-color: #964614; /*cor de fundo quando o botao é marcado*/
+}
+
+.form-opcoes a {
+  color: #121212;
+}
+
+.btn-login {
+  background-color: #964614;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+
+  cursor: pointer;
+
+  border: none;
+  border-radius: 9px;
+  width: 400px;
+  padding: 14px;
+
+  margin-top: 70px;
+
+  text-align: center;
+}
+
+.divisor {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 30px 0;
+  color: #666666;
+  font-size: 13px;
+}
+
+.divisor::before,
+.divisor::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #B5B5B5;
+}
+
+.btn-google {
+  border: 2px solid #121212;
+  background-color: #D6F3EE;
+  font-weight: 500;
+  font-size: 16px;
+
+  cursor: pointer;
+
+  border-radius: 9px;
+  width: 400px;
+  padding: 14px;
+
+  margin-top: 10px;
+
+  text-align: center;
+}
+
+.link-cadastrar {
+  margin-top: 20px;
+}
+
+.link-cadastrar a {
+  color: #121212;
+}
