@@ -38,6 +38,13 @@ body {
   transform: translateY(-50%);
 }
 
+main {
+  width: 100%;
+  max-width: 600px;
+  margin: 80px auto 0 auto;
+  text-align: left; /* Mantém todo o conteúdo interno alinhado à esquerda */
+}
+
 .progresso {
   width: 100%;
   max-width: 600px;
@@ -67,6 +74,136 @@ body {
   background-color: #964614;
 }
 
-.title p {
+.titulo-principal {
+  margin-top: 8px;
+}
+
+.subtitutulo {
+  margin-bottom: 5px;
+}
+
+.titulo-principal, .subtitutulo {
+  text-align: left;
+}
+
+.subtitutulo {
   color: #666666;
+}
+
+.dados-pessoais {
+  margin-top: 20px;
+}
+
+.bg-bege {
+  background-color: #ECE1CA;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  width: 560px;
+}
+
+.titulo-dp, .titulo-de, .titulo-s {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.campo label {
+  color: black;
+  font-weight: 500;
+}
+
+.campo input {
+  width: 500px;
+  border-radius: 9px;
+  border: 1px solid black;
+  padding: 10px 10px;
+  margin-bottom: 14px;
+}
+
+.campo-n, .campo-complemento {
+  display: inline-flex;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.campo-n {
+  margin-right: 55px;
+}
+
+.campo-n label, .campo-complemento label {
+  color: black;
+  font-weight: 500;
+}
+
+.campo-n input, .campo-complemento input {
+  width: 220px;
+  border-radius: 9px;
+  border: 1px solid black;
+  padding: 10px 10px;
+  margin-bottom: 14px;
+}
+
+.campo-cidade, .campo-estado {
+  display: inline-flex;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.campo-cidade {
+  margin-right: 55px;
+}
+
+.campo-cidade label, .campo-estado label {
+  color: black;
+  font-weight: 500;
+}
+
+.campo-cidade input,  #estado{
+  width: 220px;
+  border-radius: 9px;
+  border: 1px solid black;
+  padding: 10px 10px;
+  margin-bottom: 14px;
+}
+
+.p-senha {
+  color: #525050;
+}
+
+.btn {
+  margin-top: 10px;
+
+  background-color: #964614;
+  color: white;
+  border: none;
+
+  width: 560px;
+  padding: 14px 14px;
+  border-radius: 9px;
+
+  font-weight: 500;
+  text-align: center;
+}
+
+.sec-btn p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: #666666;
+}
+
+.sec-btn a {
+  color: black;
+}
+
+.sec-btn p, a {
+  display: flex;
+  gap: 6px;
 }

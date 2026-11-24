@@ -24,12 +24,12 @@
         </div>
 
         <div class="title">
-            <h1>Criar conta</h1>
-            <p>Campos com * são defensorias</p>
+            <h1 class="titulo-principal">Criar conta</h1>
+            <p class="subtitutulo">Campos com * são obrigatórios</p>
         </div>
 
         <section class="dados-pessoais">
-            <h2>1. Dados pessoais</h2>
+            <h2 class="titulo-dp">1. Dados pessoais</h2>
             <form class="bg-bege">
                 <div class="campo">
                     <label for="nome">Nome completo *</label>
@@ -48,13 +48,13 @@
 
                 <div class="campo">
                     <label for="email">E-mail *</label>
-                    <input type="email" id="email" name="email" required >
+                    <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required >
                 </div>
             </form>
         </section>
 
         <section class="dados-endereco">
-            <h2>2. Endereço</h2>
+            <h2 class="titulo-de">2. Endereço</h2>
             <form class="bg-bege">
                 <div class="campo">
                     <label for="cep">CEP *</label>
@@ -76,7 +76,7 @@
                     <input type="text" name="comple" id="comple" placeholder="Apto, bloco..." required >
                 </div>
 
-                <div class="bairro">
+                <div class="campo">
                     <label for="bairro">Bairro *</label>
                     <input type="text" name="bairro" id="bairro" required >
                 </div>
@@ -124,12 +124,12 @@
         </section>
 
         <section class="Criar senha">
-            <h2>3. Criar senha</h2>
+            <h2 class="titulo-s">3. Criar senha</h2>
             <form class="bg-bege">
                 <div class="campo">
                     <label for="senha">Senha *</label>
                     <input type="password" id="senha" name="senha" minlength="8" required >
-                    <p>Mínimo de 8 caracteres, com letras e números.</p>
+                    <p class="p-senha">Mínimo de 8 caracteres, com letras e números.</p>
                 </div>
 
                 <div class="campo">
@@ -140,9 +140,9 @@
 
         </section>
 
-        <section>
-            <button>Continuar</button>
-            <p>Já tem uma conta ? <a href="../entrar-criar/login.html" >Entrar</a></p>
+        <section class="sec-btn">
+            <button class="btn">Continuar</button>
+            <p class="">Já tem uma conta ?<a href="../entrar-criar/login.html">Entrar</a></p>
         </section>
     </main>
 
