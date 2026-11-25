@@ -38,6 +38,8 @@ body {
   transform: translateY(-50%);
 }
 
+/* ====================== MAIN ======================*/
+
 main {
   width: 100%;
   max-width: 600px;
@@ -119,7 +121,7 @@ main {
 }
 
 .campo input {
-  width: 500px;
+  width: 100%;
   border-radius: 9px;
   border: 1px solid black;
   padding: 10px 10px;
@@ -172,8 +174,81 @@ main {
   margin-bottom: 14px;
 }
 
+
+/* ====================== SENHA ======================*/
+
+.campo-senha {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.campo-senha label {
+  color: black;
+  font-weight: 500;
+}
+
+.campo-senha input {
+  width: 100%;
+  border-radius: 9px;
+  border: 1px solid black;
+  padding: 10px 75px 10px 10px;
+
+}
+
+.mostrar-1 {
+  position: absolute;
+  right: 15px;
+  top: 42%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  color: #000;
+}
+
+
+.campo-confirm-senha {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.campo-confirm-senha label {
+  color: black;
+  font-weight: 500;
+}
+
+.campo-confirm-senha input {
+  width: 100%;
+  border-radius: 9px;
+  border: 1px solid black;
+  padding: 10px 75px 10px 10px;
+  margin-bottom: 14px;
+}
+
+.mostrar-2 {
+  position: absolute;
+  right: 15px;
+  top: 55%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  color: #000;
+}
+
 .p-senha {
+  margin-top: 1px;
   color: #525050;
+  margin-bottom: 14px;
+  font-size: 14px;
 }
 
 .btn {
@@ -189,6 +264,8 @@ main {
 
   font-weight: 500;
   text-align: center;
+  
+  cursor: pointer;
 }
 
 .sec-btn p {
@@ -206,4 +283,86 @@ main {
 .sec-btn p, a {
   display: flex;
   gap: 6px;
+}
+
+
+/* ====================== FOOTER ====================== */
+
+footer {
+  background-color: #ECE1CA;
+  padding: 60px 14% 30px 14%;
+  margin-top: 200px;
+}
+
+.footer-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #d5c7ab;
+}
+
+.footer-1 button {
+  background-color: #964614;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+}
+
+.footer-1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.footer2-a img {
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+.lista a {
+  text-decoration: none;
+  color: #5F5A52;
+}
+
+.footer-2 ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+  color: #5F5A52;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid #d5c7ab;
+  font-size: 14px;
+  color: #5F5A52;
+}
+
+.footer-legal-links a {
+  color: #5F5A52;
+  text-decoration: none;
+  
 }

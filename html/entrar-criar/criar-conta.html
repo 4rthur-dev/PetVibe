@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../../assets/favicon/favicon.ico" type="image/x-icon">
     <title>PetVibe - Criar conta</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -126,25 +127,79 @@
         <section class="Criar senha">
             <h2 class="titulo-s">3. Criar senha</h2>
             <form class="bg-bege">
-                <div class="campo">
+                <div class="campo-senha">
                     <label for="senha">Senha *</label>
-                    <input type="password" id="senha" name="senha" minlength="8" required >
+                    <input  type="password" id="senha" name="senha" minlength="8" placeholder="Crie uma senha" required >
+                    <button class="mostrar-1" type="button" id="btn-mostrar" onclick="alternarSenha()">Mostrar</button>
                     <p class="p-senha">Mínimo de 8 caracteres, com letras e números.</p>
                 </div>
 
-                <div class="campo">
+                <div class="campo-confirm-senha">
                     <label for="senha-confirm">Confirmar senha *</label>
-                    <input type="password" name="senha-confirm" id="senha-confirm" minlength="8" required>
+                    <input type="password" name="senha-confirm" id="senha-confirm" minlength="8" placeholder="Repita a senha" required>
+                    <button class="mostrar-2" type="button" id="btn-mostrar" onclick="alternarSenha()">Mostrar</button>
                 </div>
             </form>
 
         </section>
 
         <section class="sec-btn">
-            <button class="btn">Continuar</button>
+            <button type="submit" class="btn">Continuar</button>
             <p class="">Já tem uma conta ?<a href="../entrar-criar/login.html">Entrar</a></p>
         </section>
     </main>
 
+    <footer>
+        <!-- Primeira seção: Chamada para ação (CTA) -->
+        <section class="footer-1">
+            <h2>Pronto para deixar o seu pet ainda mais feliz?</h2>
+            <p>Reserve o horário agora e receba a confirmação na hora.</p>
+            <button><a href="../home/agendar-servico.html">+ Agendar serviço</a></button>
+        </section>
+
+        <!-- Segunda seção: Links, logo e contato -->
+        <section class="footer-2">
+            <article class="footer2-a">
+                <img src="../../assets/img/logo-petvibe.png" alt="Logo PetVibe">
+                <p>Cuidado, carinho e praticidade para o seu pet. <br> Agende banho e tosa em poucos cliques.</p>
+            </article>
+
+            <article class="servicos-footer">
+                <h3>Serviços</h3>
+                <ul class="lista">
+                    <li><a href="../home/agendar-servico.html">Banho</a></li>
+                    <li><a href="../home/agendar-servico.html">Tosa</a></li>
+                    <li><a href="../home/agendar-servico.html">Banho + Tosa</a></li>
+                    <li><a href="../agendamentos.html">Meus agendamentos</a></li>
+                </ul>
+            </article>
+
+            <article class="conta-footer">
+                <h3>Minha conta</h3>
+                <ul>
+                    <li onclick="window.location.href='../meu-perfil.html'">Meu perfil</li>
+                    <li onclick="window.location.href='../meus-pets.html'">Meus pets</li>
+                    <li onclick="window.location.href='../historico.html'">Histórico</li>
+                </ul>
+            </article>
+
+            <article class="contato-footer">
+                <h3>Contato</h3>
+                <ul>
+                    <li>(11) 0000-0000</li>
+                    <li>petvibe31@gmail.com</li>
+                </ul>
+            </article>
+        </section>
+        <div class="footer-bottom">
+            <p>&copy 2026 PetVibe. Todos os direitos reservados.</p>
+            <div class="footer-legal-links">
+                <a href="#">Termos de uso</a>
+                <a href="#">Privacidade</a> 
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+        
+    </footer>
 </body>
 </html>
