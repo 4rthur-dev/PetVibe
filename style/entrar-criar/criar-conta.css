@@ -276,6 +276,10 @@ main {
   color: #666666;
 }
 
+.a-btn {
+  color: white;
+}
+
 .sec-btn a {
   color: black;
 }
