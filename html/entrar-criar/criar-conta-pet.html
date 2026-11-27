@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../style/entrar-criar/criar-conta-pet.css">
     <title>PetVibe - Criar conta Pet</title>
 </head>
 <body>
@@ -11,5 +13,161 @@
             <img class="logo" src="../../assets/img/logo-petvibe.png" alt="Logo do Site" title="Logo PetVibe">
         </nav>
     </header>
+
+    <main>
+        <div class="progresso">
+            <p class="text-passos">Passo 2 de 2 · Seus pet</p>
+            <div class="barra-progresso">
+                <div class="step active"></div>
+                <div class="step"></div>
+            </div>
+        </div>
+
+        <div class="title">
+            <h1 class="titulo-principal">Criar conta para seu pet</h1>
+            <a href="">Pular por enquanto</a>
+        </div>
+
+        <section class="dados-pet">
+            <h2 class="titulo-pet">1. Dados do pet</h2>
+            <form class="bg-bege">
+                <div class="campo">
+                    <label for="nome">Nome do pet *</label>
+                    <input type="text" id="nome" name="nome" placeholder="Thor" required >
+                </div>
+
+                <div class="campo-especie">
+                    <p>Espécie *</p>
+
+                    <div class="opcoes">
+                        <input type="radio" id="cao" name="especie" required>
+                        <label for="cao" class="botao-opcao">Cão</label>
+
+                        <input type="radio" id="gato" name="especie" required>
+                        <label for="gato" class="botao-opcao">Gato</label>
+                    </div>
+                </div>
+
+                <div class="campo-raca">
+                    <label for="raca">Raça *</label>
+                    <select name="raca-pet" id="raca">
+                        <option value="">Selecione a raça</option>
+                    </select>
+                    <p>Não sabe? Escolha "Sem raça definida".</p>
+                    
+                </div>
+
+                <div class="campo-sexo">
+                    <p>Sexo *</p>
+
+                    <div class="opcoes">
+                        <input type="radio" id="macho" name="sexo" required>
+                        <label for="macho" class="botao-opcao">Macho</label>
+
+                        <input type="radio" id="femea" name="sexo" required>
+                        <label for="femea" class="botao-opcao">Fêmea</label>
+                    </div>
+                </div>
+
+                <div class="campo-porte">
+                    <p>Porte *</p>
+
+                    <div class="opcoes">
+                        <input type="radio" id="pequeno" name="porte" required>
+                        <label for="pequeno" class="botao-opcao">Pequeno</label>
+
+                        <input type="radio" id="medio" name="porte" required>
+                        <label for="medio" class="botao-opcao">Médio</label>
+
+                        <input type="radio" name="porte" id="grande">
+                        <label for="grande" class="botao-opcao">Grande</label>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="foto-pet">
+            <h2>2. Foto do pet (opcional)</h2>
+            
+            <div class="foto">
+                <span>foto</span>
+            </div>
+
+            <div>
+                <button>Adicionar foto</button>
+                <p>JPG ou PNG, até 5 MB</p>
+            </div>
+        </section>
+
+        <section class="mais-detalhes">
+            <h2>3. Mais detalhes (opcional)</h2>
+            <form class="bg-bege">
+                <div class="campo-nasc">
+                    <label for="nascimento">Data de nascimento</label>
+                    <input type="date" name="nasc" id="nascimento" required>
+                </div>
+
+                <div class="campo">
+                    <label for="peso">Peso</label>
+                    <input type="text" name="nasc" id="nascimento" required>
+                </div>
+            </form>
+        </section>
+
+        <button class="btn-finalizar">Finalizar cadastro</button>
+    </main>
+
+    <footer>
+        <!-- Primeira seção: Chamada para ação (CTA) -->
+        <section class="footer-1">
+            <h2>Pronto para deixar o seu pet ainda mais feliz?</h2>
+            <p>Reserve o horário agora e receba a confirmação na hora.</p>
+            <button><a href="../home/agendar-servico.html">+ Agendar serviço</a></button>
+        </section>
+
+        <!-- Segunda seção: Links, logo e contato -->
+        <section class="footer-2">
+            <article class="footer2-a">
+                <img src="../../assets/img/logo-petvibe.png" alt="Logo PetVibe">
+                <p>Cuidado, carinho e praticidade para o seu pet. <br> Agende banho e tosa em poucos cliques.</p>
+            </article>
+
+            <article class="servicos-footer">
+                <h3>Serviços</h3>
+                <ul class="lista">
+                    <li><a href="../home/agendar-servico.html">Banho</a></li>
+                    <li><a href="../home/agendar-servico.html">Tosa</a></li>
+                    <li><a href="../home/agendar-servico.html">Banho + Tosa</a></li>
+                    <li><a href="../agendamentos.html">Meus agendamentos</a></li>
+                </ul>
+            </article>
+
+            <article class="conta-footer">
+                <h3>Minha conta</h3>
+                <ul>
+                    <li onclick="window.location.href='../meu-perfil.html'">Meu perfil</li>
+                    <li onclick="window.location.href='../meus-pets.html'">Meus pets</li>
+                    <li onclick="window.location.href='../historico.html'">Histórico</li>
+                </ul>
+            </article>
+
+            <article class="contato-footer">
+                <h3>Contato</h3>
+                <ul>
+                    <li>(11) 0000-0000</li>
+                    <li>petvibe31@gmail.com</li>
+                </ul>
+            </article>
+        </section>
+        <div class="footer-bottom">
+            <p>&copy 2026 PetVibe. Todos os direitos reservados.</p>
+            <div class="footer-legal-links">
+                <a href="#">Termos de uso</a>
+                <a href="#">Privacidade</a> 
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+        
+    </footer>
 </body>
 </html>

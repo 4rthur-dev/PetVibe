@@ -1,0 +1,77 @@
+@import url('https://googleapis.com');
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Ativa a rolagem suave em toda a página */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+/*============================= MENU =============================*/
+.navbar { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 10px 50px; 
+  background-color: #ECE1CA; 
+  border-bottom: 2px solid #ECE1CA; 
+  min-height: 90px;
+  position: sticky;
+}
+
+.logo { 
+  width: 80px; 
+  height: 80px;
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ====================== MAIN ======================*/
+
+main {
+  width: 100%;
+  max-width: 600px;
+  margin: 80px auto 0 auto;
+  text-align: left; /* Mantém todo o conteúdo interno alinhado à esquerda */
+}
+
+.progresso {
+  width: 100%;
+  max-width: 600px;
+}
+
+.text-passos {
+  color: #666666;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.barra-progresso {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.step {
+  flex: 1; /* Faz todas as barras terem o mesmo tamanho */
+  height: 5px; /* Espessura da barra */
+  background-color: #964614; 
+  border-radius: 999px; 
+  transition: background-color 0.3s ease;
+}
+
+.step.active {
+  background-color: #964614;
+}
